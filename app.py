@@ -14,7 +14,7 @@ def search_by_id(itemid):
 
     conn: sqlite3.Connection = app.config["db"]
     cursor = conn.cursor()
-    cursor.execute(requests.SEARCH_BY_ID_REQUEST, (itemid, ))
+    cursor.execute(requests.SEARCH_BY_ID_REQUEST, (itemid,))
     row = cursor.fetchone()
 
     cursor.close()
